@@ -1,10 +1,468 @@
-<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Para Denis ❤️</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(180deg,#fff0f4,#fff 35%,#fff4f7);color:#33252b}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}.card{max-width:720px;width:100%;background:#ffffffd9;border-radius:28px;padding:34px 22px;box-shadow:0 16px 50px #a64d6a26}.heart{font-size:56px;animation:p 1.2s infinite}@keyframes p{50%{transform:scale(1.12)}}h1{font-family:Georgia,serif;font-size:42px;margin:10px 0;color:#b63d64}h2{font-family:Georgia,serif;color:#a93559}.sub{font-size:19px;line-height:1.6}.scroll{margin-top:26px;color:#8b6170}section{max-width:760px;margin:auto;padding:40px 20px}.photo{background:#fff;border-radius:24px;padding:12px;margin:18px 0 42px;box-shadow:0 10px 35px #6d33471c}.photo img{width:100%;max-height:680px;object-fit:contain;border-radius:18px;background:#f7edf0}.caption{padding:12px 10px 4px;text-align:center;font-size:17px;line-height:1.55}.promise{background:#fff;border-radius:26px;padding:28px;margin:20px 0;box-shadow:0 10px 35px #6d33471c;font-size:18px;line-height:1.75;text-align:center}.end{text-align:center;padding:55px 20px 90px}.end .big{font-family:Georgia,serif;font-size:34px;color:#b63d64}.tiny{color:#8f6875}button{border:0;background:#e65f87;color:white;padding:15px 22px;border-radius:999px;font-size:16px;box-shadow:0 8px 20px #e65f8740}#secret{display:none;margin-top:22px;font-family:Georgia,serif;font-size:22px;color:#a93559}</style></head><body><div class='hero'><div class='card'><div class='heart'>❤️</div><div class='tiny'>Una pequeña historia que comenzó sin buscarla</div><h1>Para mi blanquita hermosa</h1><p class='sub'>Nos conocimos sin planearlo, casi por casualidad. Pero desde ese momento apareció una química que no esperaba y que, poco a poco, hizo que quisiera conocerte más.</p><p class='scroll'>↓ Esta es una parte de nuestra historia ↓</p></div></div><section><h2>El comienzo 🤍</h2><div class='photo'><img src='primera_foto.jpg'><div class='caption'><b>La primera foto que me enviaste.</b><br>Tal vez para ti en ese momento solo era una foto, pero para mí terminó siendo uno de esos pequeños recuerdos que ahora tienen un significado especial.</div></div><h2>La primera que te “robé” 😏</h2><div class='photo'><img src='foto_robada.jpg'><div class='caption'>Sí… esta fue la primera foto que te robé jajaja. No sabía hasta dónde llegaría nuestra historia, pero ya había algo en ti que hacía que no pudiera evitar sonreír.</div></div><h2>El día que nos conocimos ✨</h2><div class='photo'><img src='dia_que_nos_conocimos.jpg'><div class='caption'>Así estaba aquel día. Un día que parecía uno más y terminó poniéndote en mi camino. Qué curioso pensar que ninguno de los dos sabía lo que iba a comenzar desde ahí.</div></div><h2>Mi compromiso contigo ❤️</h2><div class='promise'>No quiero prometerte una historia perfecta, porque las historias de verdad no lo son. Lo que sí quiero prometerte es sinceridad, respeto y demostrarte con hechos que mis intenciones contigo van mucho más allá de un momento.<br><br>Quiero conocerte en tus días buenos y también en los complicados, hacerte sonreír, aprender de ti y construir esto sin apresurarlo, pero sin tener miedo de sentirlo.<br><br><b>Porque conocerte fue una casualidad… pero elegir quedarme, cuidarte y apostar por nosotros es mi decisión.</b></div></section><div class='end'><div class='heart'>🤍</div><p class='big'>Breslier & Denis</p><p>Quizá nuestra historia recién empieza…<br>y yo quiero descubrir contigo hasta dónde puede llegar.</p><div style="text-align:center; margin:30px 0;">
-  <p style="font-family:Georgia,serif;font-size:20px;color:#a93559;">
-    🎵 Nuestra canción
-  </p>
+<!doctype html>
+<html lang="es">
 
-  <audio id="musica" controls loop style="width:100%;max-width:500px;">
-    <source src="cancion.mp" type="audio/mpeg">
-    Tu navegador no puede reproducir este audio.
-  </audio>
-</div><button onclick="document.getElementById('secret').style.display='block';this.style.display='none'">Tengo algo más que decirte ❤️</button><div id='secret'>De todas las casualidades de la vida,<br>me alegra muchísimo haber coincidido contigo.</div></div></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Para Denis ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, #ffe1eb 0%, transparent 35%),
+        linear-gradient(180deg, #fff0f4, #ffffff 45%, #fff4f7);
+      color: #33252b;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .card {
+      max-width: 720px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 30px;
+      padding: 42px 25px;
+      box-shadow: 0 20px 60px rgba(166, 77, 106, 0.16);
+      backdrop-filter: blur(8px);
+    }
+
+    .heart {
+      font-size: 58px;
+      animation: heartbeat 1.3s infinite;
+    }
+
+    @keyframes heartbeat {
+      50% {
+        transform: scale(1.12);
+      }
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(34px, 7vw, 48px);
+      margin: 12px 0;
+      color: #b63d64;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      color: #a93559;
+      text-align: center;
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    .tiny {
+      color: #8f6875;
+      font-size: 15px;
+    }
+
+    .sub {
+      font-size: 19px;
+      line-height: 1.7;
+      margin: 20px auto 0;
+      max-width: 600px;
+    }
+
+    .scroll {
+      margin-top: 30px;
+      color: #8b6170;
+      animation: floating 2s infinite;
+    }
+
+    @keyframes floating {
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    /* CONTENIDO */
+
+    section {
+      max-width: 760px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .photo {
+      background: #ffffff;
+      border-radius: 25px;
+      padding: 12px;
+      margin: 20px 0 55px;
+      box-shadow: 0 12px 35px rgba(109, 51, 71, 0.12);
+    }
+
+    .photo img {
+      width: 100%;
+      max-height: 680px;
+      object-fit: contain;
+      border-radius: 19px;
+      background: #f7edf0;
+      display: block;
+    }
+
+    .caption {
+      padding: 16px 10px 8px;
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    /* COMPROMISO */
+
+    .promise {
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 28px;
+      padding: 30px 24px;
+      margin: 25px 0;
+      box-shadow: 0 12px 35px rgba(109, 51, 71, 0.12);
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .promise b {
+      color: #a93559;
+    }
+
+    /* CANCIÓN */
+
+    .music-box {
+      margin: 40px auto;
+      max-width: 560px;
+      padding: 25px 20px;
+      background: linear-gradient(145deg, #fff, #fff0f4);
+      border-radius: 28px;
+      box-shadow: 0 12px 35px rgba(109, 51, 71, 0.13);
+      text-align: center;
+    }
+
+    .music-title {
+      font-family: Georgia, serif;
+      color: #a93559;
+      font-size: 23px;
+      margin: 0 0 6px;
+    }
+
+    .music-text {
+      color: #8f6875;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    audio {
+      width: 100%;
+      height: 48px;
+    }
+
+    /* FINAL */
+
+    .end {
+      text-align: center;
+      padding: 70px 20px 100px;
+    }
+
+    .end .big {
+      font-family: Georgia, serif;
+      font-size: clamp(30px, 7vw, 38px);
+      color: #b63d64;
+      margin: 15px 0;
+    }
+
+    .final-text {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .love-button {
+      border: none;
+      background: linear-gradient(135deg, #e65f87, #c83e68);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(230, 95, 135, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .love-button:hover {
+      transform: scale(1.04);
+    }
+
+    #secret {
+      display: none;
+      margin: 25px auto 0;
+      max-width: 550px;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      line-height: 1.6;
+      color: #a93559;
+      animation: appear 0.8s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 20px 15px;
+      }
+
+      .card {
+        padding: 35px 20px;
+        border-radius: 25px;
+      }
+
+      .sub {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+
+      .photo {
+        margin-bottom: 45px;
+      }
+
+      .caption {
+        font-size: 16px;
+      }
+
+      .promise {
+        font-size: 17px;
+        padding: 25px 20px;
+      }
+
+      .music-box {
+        padding: 22px 15px;
+      }
+
+      .end {
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- INICIO -->
+
+  <div class="hero">
+    <div class="card">
+
+      <div class="heart">❤️</div>
+
+      <div class="tiny">
+        Una pequeña historia que comenzó sin buscarla
+      </div>
+
+      <h1>Para mi blanquita hermosa</h1>
+
+      <p class="sub">
+        Nos conocimos sin planearlo, casi por casualidad.
+        Pero desde ese momento apareció una química que no esperaba
+        y que, poco a poco, hizo que quisiera conocerte más.
+      </p>
+
+      <p class="scroll">
+        ↓ Esta es una parte de nuestra historia ↓
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- HISTORIA -->
+
+  <section>
+
+    <h2>El comienzo 🤍</h2>
+
+    <div class="photo">
+
+      <img src="primera_foto.jpg" alt="La primera foto que me enviaste">
+
+      <div class="caption">
+
+        <b>La primera foto que me enviaste.</b>
+
+        <br>
+
+        Tal vez para ti en ese momento solo era una foto,
+        pero para mí terminó siendo uno de esos pequeños recuerdos
+        que ahora tienen un significado especial.
+
+      </div>
+
+    </div>
+
+
+    <h2>La primera que te “robé” 😏</h2>
+
+    <div class="photo">
+
+      <img src="foto_robada.jpg" alt="La primera foto que te robé">
+
+      <div class="caption">
+
+        Sí… esta fue la primera foto que te robé jajaja.
+        No sabía hasta dónde llegaría nuestra historia,
+        pero ya había algo en ti que hacía que no pudiera evitar sonreír.
+
+      </div>
+
+    </div>
+
+
+    <h2>El día que nos conocimos ✨</h2>
+
+    <div class="photo">
+
+      <img src="dia_que_nos_conocimos.jpg" alt="El día que nos conocimos">
+
+      <div class="caption">
+
+        Así estaba aquel día.
+        Un día que parecía uno más y terminó poniéndote en mi camino.
+        Qué curioso pensar que ninguno de los dos sabía
+        lo que iba a comenzar desde ahí.
+
+      </div>
+
+    </div>
+
+
+    <!-- COMPROMISO -->
+
+    <h2>Mi compromiso contigo ❤️</h2>
+
+    <div class="promise">
+
+      No quiero prometerte una historia perfecta,
+      porque las historias de verdad no lo son.
+
+      <br><br>
+
+      Lo que sí quiero prometerte es sinceridad,
+      respeto y demostrarte con hechos que mis intenciones
+      contigo van mucho más allá de un momento.
+
+      <br><br>
+
+      Quiero conocerte en tus días buenos y también en los complicados,
+      hacerte sonreír, aprender de ti y construir esto sin apresurarlo,
+      pero sin tener miedo de sentirlo.
+
+      <br><br>
+
+      <b>
+        Porque conocerte fue una casualidad…
+        pero elegir quedarme, cuidarte y apostar por nosotros
+        es mi decisión.
+      </b>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+
+  <div class="end">
+
+    <div class="heart">🤍</div>
+
+    <p class="big">
+      Breslier & Denis
+    </p>
+
+    <p class="final-text">
+      Quizá nuestra historia recién empieza…<br>
+      y yo quiero descubrir contigo hasta dónde puede llegar.
+    </p>
+
+
+    <!-- MÚSICA -->
+
+    <div class="music-box">
+
+      <p class="music-title">
+        🎵 Nuestra canción
+      </p>
+
+      <p class="music-text">
+        Puedes darle play, pausarla y controlar el volumen cuando quieras. ❤️
+      </p>
+
+      <audio id="musica" controls loop preload="metadata">
+
+        <source src="cancion.mp3" type="audio/mpeg">
+
+        Tu navegador no puede reproducir este audio.
+
+      </audio>
+
+    </div>
+
+
+    <!-- MENSAJE SECRETO -->
+
+    <button
+      class="love-button"
+      onclick="
+        document.getElementById('secret').style.display='block';
+        this.style.display='none';
+      "
+    >
+      Tengo algo más que decirte ❤️
+    </button>
+
+
+    <div id="secret">
+
+      De todas las casualidades de la vida,
+      <br>
+      me alegra muchísimo haber coincidido contigo.
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>
